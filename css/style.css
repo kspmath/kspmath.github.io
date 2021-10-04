@@ -1,0 +1,231 @@
+body {
+    font: 1em 'Roboto Mono', monospace
+}
+
+body>* {
+    box-sizing: border-box;
+}
+
+#text {
+    margin: 0 15% 3em;
+}
+
+#text h1 {
+    font-size: 1.9em;
+    letter-spacing: -0.05ch;
+    margin-bottom: 0;
+}
+
+#text h2 {
+    font-size: smaller;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-weight: 500;
+    margin: 0.1em 0 1em;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+form h3 {
+    font-size: 1em;
+    border-left: 11em solid silver;
+    padding: 0.25em 0.5em 0;
+    margin: 0 0 0.75em;
+}
+
+form {
+    font-size: 0.85em;
+}
+
+form ul {
+    margin: 0 0 2em;
+    padding: 0;
+}
+
+form ul li {
+    display: flex;
+    align-items: baseline;
+    margin: 0.2em 0;
+    justify-content: flex-start;
+}
+
+form ul li>label {
+    width: 11em;
+    padding-right: 0.5em;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.67);
+}
+
+form ul li span>label {
+    display: none;
+}
+
+form ul li span>label span {
+    display: inline-block;
+    width: 2.5em;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+form ul li input {
+    margin-right: 0.25em;
+    border-width: 0 0 1px;
+    border-color: #999;
+    border-style: solid;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+form ul li input[size="1"] {
+    width: 3.5em;
+}
+
+form ul li input[size="12"] {
+    width: 8em;
+}
+
+form ul li input[disabled] {
+    color: inherit;
+    background: inherit;
+    border-width: 0 0 0;
+}
+
+.input-btn {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-width: 0 0 1px;
+    border-color: #999;
+    border-style: solid;
+}
+
+.input-btn:hover {
+    cursor: pointer;
+    color: rgb(82, 80, 80);
+}
+
+#parameters {
+    flex-shrink: 0;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    padding: 0.5em 0.25em;
+    border-top: 1px solid silver;
+    margin-top: 5em;
+    font-size: smaller;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+@supports (display: grid) {
+    body {
+        display: grid;
+        grid-template-columns: min-content;
+        justify-content: center;
+    }
+    #text {
+        margin: 0 0 1em;
+    }
+}
+
+@media (max-width: 850px) {
+    body {
+        display: block;
+    }
+    #schematic {
+        width: 50vw;
+    }
+    #chart {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #text {
+        order: 10;
+        padding: 1em;
+        margin: 0;
+    }
+    #text h1 {
+        font-size: 1.5em;
+    }
+    section {
+        display: block;
+    }
+    form ul li input {
+        border-width: 1px;
+        border-color: black;
+        background: #FFE;
+    }
+    #schematic {
+        width: 100vw;
+        margin: 0;
+    }
+    #chart {
+        border-width: 1px 0;
+    }
+    footer {
+        order: 20;
+        margin-top: 1em;
+    }
+}
+
+@keyframes remind {
+    95% {
+        background-position: 95% 50%;
+    }
+    98% {
+        background-position: 94% 50%;
+    }
+    100% {
+        background-position: 95% 50%;
+    }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 0;
+    }
+    46% {
+        opacity: 0.5;
+    }
+    69% {
+        opacity: 0.25;
+    }
+    62% {
+        opacity: 0.67;
+    }
+    78% {
+        opacity: 0.67;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
